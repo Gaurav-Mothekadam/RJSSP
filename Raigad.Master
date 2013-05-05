@@ -1,0 +1,258 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Raigad.Master.cs" Inherits="Raigad.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>.:: Raigadh Jilla Application ::.</title>
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0)" />
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager" runat="server">
+    </asp:ScriptManager>
+   
+    <div class="header_wrap">
+    <div class="header_pck">
+        <div class="logo">
+            <asp:Image ID="ImgLogo" ImageUrl="~/images/RJPSSP_Logo_transp_200_1_trs.png" runat="server" Height="100px"
+                Width="130px" />
+        </div>
+        <div class="heading">
+            <asp:Image ID="imgBankNameLogo" ImageUrl="~/images/BankName.png" runat="server" />
+        </div>
+    </div>
+    <div class="blank"></div>
+    </div>
+
+    <div class="menu_wrap">
+        <div class="menu">
+            <ul class="pureCssMenu pureCssMenum0">
+                <li class="pureCssMenui0">
+                    <asp:LinkButton ID="lnkHome" runat="server" PostBackUrl="~/Home.aspx" CssClass="pureCssMenui0">
+                                        haoma
+                    </asp:LinkButton></li>
+                <li class="pureCssMenui0">
+                    <asp:LinkButton ID="LinkButton50" runat="server" PostBackUrl="Forms/CustomerAccount.aspx"
+                        CssClass="pureCssMenui0">saBaasad</asp:LinkButton></li>
+                <li class="pureCssMenui0">
+                    <asp:LinkButton ID="lnkLoans" runat="server" CssClass="pureCssMenui0" PostBackUrl="~/Forms/CustomerLoan.aspx">kxja-</asp:LinkButton></li>
+                <li class="pureCssMenui0"><a class="pureCssMenui0" href="#"><span>ZovaI</span><![if
+                    gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul class="pureCssMenum">
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkFixDeposite" runat="server" PostBackUrl="~/Forms/FixDeposite.aspx"
+                                CssClass="pureCssMenui">maudta Zova</asp:LinkButton>
+                        </li>
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkRecurrenceDeposite" runat="server" PostBackUrl="~/Forms/RecurrenceDeposite.aspx"
+                                CssClass="pureCssMenui">Aavata- Zova</asp:LinkButton>
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li class="pureCssMenui0"><a class="pureCssMenui0" href="#"><span>naaoMd</span><![if
+                    gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul class="pureCssMenum">
+                        <%--<li class="pureCssMenui"><a class="pureCssMenui" href="#">pauNa- naaoMd</a></li>--%>
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkKayamNidhi" runat="server" PostBackUrl="~/Forms/KayamNidhi.aspx"
+                                CssClass="pureCssMenui">kayamainaQaI naaoMd</asp:LinkButton>
+                        </li>
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkMonthlyEntries" runat="server" PostBackUrl="~/Forms/MonthlyEntries.aspx"
+                                CssClass="pureCssMenui">maaisak naaoMd</asp:LinkButton>
+                        </li>
+                        
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkCashBookEntry" runat="server" PostBackUrl="~/Forms/CashBookEntry.aspx"
+                                CssClass="pureCssMenui">k^ Sabauk naaoMd</asp:LinkButton>
+                        </li>
+                        
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li class="pureCssMenui0"><a class="pureCssMenui0" href="#"><span>irpaaoT-</span><![if
+                    gt IE 6]></a><![endif]><!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul class="pureCssMenum">
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkSabasadRpt" runat="server" PostBackUrl="~/Report/SabasadReport.aspx?Name=SabasadCustomerReport"
+                                CssClass="pureCssMenui">saBaasad irpaaoT</asp:LinkButton>
+                        </li>
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkMonthlyRpt" runat="server" PostBackUrl="~/Report/MonthlyEntryReport.aspx?Name=MonthlyEntryReport"
+                                CssClass="pureCssMenui">maaisakx naaoMd irpaaoT</asp:LinkButton>
+                        </li>
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="KarjRpt" runat="server" PostBackUrl="~/Report/LoanReport.aspx?Name=LoanReport"
+                                CssClass="pureCssMenui">kxja- irpaaoT</asp:LinkButton>
+                        </li>
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkAvartaRpt" runat="server" PostBackUrl="~/Report/AvartaThevReport.aspx?Name=AvartaThevReport"
+                                CssClass="pureCssMenui">Aavata- zova irpaaoT</asp:LinkButton>
+                        </li>
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkMudatRpt" runat="server" PostBackUrl="~/Report/MudatThevReport.aspx?Name=MudatThevReport"
+                                CssClass="pureCssMenui">maudta zova irpaaoT</asp:LinkButton>
+                        </li>
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkVarasdarRpt" runat="server" PostBackUrl="~/Report/VarasdarReport.aspx?Name=VarasdarReport"
+                                CssClass="pureCssMenui">vaarsadar irpaaoT</asp:LinkButton>
+                        </li>
+                        <li class="pureCssMenui">
+                            <asp:LinkButton ID="lnkJamindarRpt" runat="server" PostBackUrl="~/Report/JamindarReport.aspx?Name=JamindarReport"
+                                CssClass="pureCssMenui">jaaimanadar irpaaoT</asp:LinkButton>
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li class="pureCssMenui0"><a class="pureCssMenui0" href="#">madta</a></li>
+                <li class="pureCssMenuRem"></li>
+            </ul>
+            <%--<ul class="pureCssMenu pureCssMenum0">
+                                <li class="pureCssMenui0">
+                                    <asp:LinkButton ID="lnkHome" runat="server" PostBackUrl="~/Home.aspx" CssClass="pureCssMenui0">
+                                        haoma
+                                    </asp:LinkButton></li>
+                                <li class="pureCssMenui0"><a class="pureCssMenui0" href="#"><span>vyavahar</span></a>
+                                    <ul class="pureCssMenum">
+                                        <li class="pureCssMenui"><a class="pureCssMenui" href="#"><span>maudta pauva- Zova</span></a>
+                                            <ul class="pureCssMenum">
+                                                <li class="pureCssMenui">
+                                                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/FORMS/NewFD.aspx"><span>naivana</span></asp:LinkButton>
+                                                </li>
+                                                <li class="pureCssMenui">
+                                                    <asp:LinkButton ID="LinkButton37" runat="server" PostBackUrl="~/FORMS/OldFD.aspx"><span>jaunaI</span></asp:LinkButton>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="pureCssMenui"><a class="pureCssMenui" href="#"><span>Aavata- Zova</span></a>
+                                            <ul class="pureCssMenum">
+                                                <li class="pureCssMenui">
+                                                    <asp:LinkButton ID="LinkButton38" runat="server" PostBackUrl="~/FORMS/NewAVT.aspx"><span>naivana</span></asp:LinkButton>
+                                                </li>
+                                                <li class="pureCssMenui">
+                                                    <asp:LinkButton ID="LinkButton39" runat="server" PostBackUrl="~/FORMS/OldAVT.aspx"><span>jaunaI</span></asp:LinkButton>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton40" runat="server" PostBackUrl="~/FORMS/CashDeposite.aspx"><span>paOsao BarNaa</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton41" runat="server" PostBackUrl="~/FORMS/ChequeDeposite.aspx"><span>QanaadoSa BarNaa</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton42" runat="server" PostBackUrl="~/FORMS/LoanDeposite.aspx"><span>kxja- BarNaa</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton43" runat="server" PostBackUrl="~/FORMS/Transfer.aspx"><span>T/ansafxr</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton44" runat="server" PostBackUrl="~/FORMS/Withdrawal.aspx"><span>paOsao kxaZnao</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton45" runat="server" PostBackUrl="~/FORMS/TransactionKNT.aspx"><span>kxayama inaQaI Zova</span></asp:LinkButton></li>
+                                    </ul>
+                                </li>
+                                <li class="pureCssMenui0"><a class="pureCssMenui0" href="#"><span>irpaaoT-</span></a>
+                                    <ul class="pureCssMenum">
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton46" runat="server" PostBackUrl="~/FORMS/AccountReport.aspx"><span>Kaatao irpaaoT-</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton47" runat="server" PostBackUrl="~/FORMS/CustomerReport.aspx"><span>Kaataoinahaya irpaaoT-</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton48" runat="server" PostBackUrl="~/FORMS/BankStatement.aspx"><span>Kaataodar irpaaoT-</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton49" runat="server" PostBackUrl="~/FORMS/TransactionReport.aspx"><span>vyavahar irpaaoT-</span></asp:LinkButton></li>
+                                    </ul>
+                                </li>
+                                <li class="pureCssMenui0"><a class="pureCssMenui0" href="#"><span>ADimana</span></a>
+                                    <ul class="pureCssMenum">
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton50" runat="server" PostBackUrl="Forms/CustomerAccount.aspx"><span>naivana Kaatao</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton51" runat="server" PostBackUrl="~/FORMS/LoanAccount.aspx"><span>kxja- Kaatao</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton52" runat="server" PostBackUrl="~/FORMS/BankProfile.aspx"><span>ba^Mkx vaNa-na</span></asp:LinkButton>
+                                        </li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton53" runat="server" PostBackUrl="~/FORMS/BankBranches.aspx"><span>ba^Mkx SaaKaa</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton54" runat="server" PostBackUrl="~/FORMS/ChequeBook.aspx"><span>QanaadoSa pauistakxa</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton55" runat="server" PostBackUrl="~/FORMS/User.aspx"><span>yaujar</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton56" runat="server" PostBackUrl="~/FORMS/InterestRate.aspx"><span>vyaaja dr</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton57" runat="server" PostBackUrl="~/FORMS/KNT.aspx"><span>kxayama inaQaI Zova</span></asp:LinkButton></li>
+                                    </ul>
+                                </li>
+                                <li class="pureCssMenui0"><a class="pureCssMenui0" href="#"><span>saoiTMga</span></a>
+                                    <ul class="pureCssMenum">
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton58" runat="server" PostBackUrl="~/FORMS/Option.aspx"><span>pa`aoga`ama saoiTMga</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton59" runat="server" PostBackUrl="~/FORMS/AddTaluka.aspx"><span>taalaukxa</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton60" runat="server" PostBackUrl="~/FORMS/AccountTypes.aspx"><span>Kaatao pa`kxar</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton61" runat="server" PostBackUrl="~/FORMS/CustomerType.aspx"><span>KaataoQaarkxaMcao pa`kxar</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton62" runat="server" PostBackUrl="~/FORMS/CurrencyTypes.aspx"><span>calana pa`kxar</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton63" runat="server" PostBackUrl="~/FORMS/IdentificationTypes.aspx"><span>AaoLKa pa`kxar</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton64" runat="server" PostBackUrl="~/FORMS/LoanType.aspx"><span>kxja- pa`kxar</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton65" runat="server" PostBackUrl="~/FORMS/TransactionType.aspx"><span>vyavahar pa`kxar</span></asp:LinkButton></li>
+                                    </ul>
+                                </li>
+                                <li class="pureCssMenui0"><a class="pureCssMenui0" href="#"><span>Tulsa</span></a>
+                                    <ul class="pureCssMenum">
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton66" runat="server"><span>gaNakxyaM~a</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton67" runat="server"><span>vaD-pa^D</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton68" runat="server"><span>naaoTpa^D</span></asp:LinkButton></li>
+                                        <li class="pureCssMenui">
+                                            <asp:LinkButton ID="LinkButton69" runat="server"><span>paoMT</span></asp:LinkButton></li>
+                                    </ul>
+                                </li>
+                            </ul>--%>
+        </div>
+    </div>
+    
+    <div class="clear"></div>
+    
+    <div class="userinfo">
+        Welcome
+        <asp:LinkButton ID="lnkUsername" runat="server" CssClass="link" PostBackUrl="~/Forms/User.aspx"></asp:LinkButton> 
+        |
+        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="link" OnClick="lnkLogout_Click">Logout</asp:LinkButton> 
+    </div>
+                        
+    <%-- <a href="" class="link"> saumaMta</a> | <a href="" class="link">laa^gaAa{}T         
+                    <div class="userinfo">
+                        sausvaagatama
+                        <asp:LinkButton ID="lnkUsername" runat="server" CssClass="link" PostBackUrl="~/Forms/User.aspx">
+                        </asp:LinkButton>
+                        |
+                        <asp:LinkButton ID="lnkLogout" runat="server" CssClass="link" OnClick="lnkLogout_Click">baahor
+            paDa
+                        </asp:LinkButton>
+                    </div>
+     --%>         
+    <div class="contents">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    
+    <div class="clear"></div>       
+    
+    <div class="footer">
+        Copyrights@BigThoughtsSystems 2012.
+    </div>
+    </form>
+</body>
+</html>

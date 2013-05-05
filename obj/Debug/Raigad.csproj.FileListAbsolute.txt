@@ -1,0 +1,5 @@
+D:\Projects\RJSSP\bin\Raigad.dll
+D:\Projects\RJSSP\bin\Raigad.pdb
+D:\Projects\RJSSP\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\RJSSP\obj\Debug\Raigad.dll
+D:\Projects\RJSSP\obj\Debug\Raigad.pdb
